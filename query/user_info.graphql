@@ -1,5 +1,5 @@
-query userInfo($username: String!) {
-  user(login: username) {
+query userInfo($login: String!) {
+  user(login: login) {
     name
     login
     contributionsCollection {
