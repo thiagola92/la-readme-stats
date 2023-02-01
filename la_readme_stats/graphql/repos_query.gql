@@ -1,0 +1,17 @@
+query userInfo($login: String!, $after: String) {
+    user(login: $login) {
+        repositories(first: 100, ownerAffiliations: OWNER, orderBy: {direction: DESC, field: STARGAZERS}, after: $after) {
+            totalCount
+            nodes {
+                name
+                stargazers {
+                    totalCount
+                }
+            }
+            pageInfo {
+                hasNextPage
+                endCursor
+            }
+        }
+    }
+}
