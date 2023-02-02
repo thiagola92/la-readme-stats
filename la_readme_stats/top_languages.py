@@ -8,6 +8,14 @@ from la_readme_stats.graphql import LANGUAGES_QUERY
 
 
 def get_top_languages() -> dict:
+    json = fetch_json()
+    nodes = json["data"]["user"]["repositories"]["nodes"]
+    nodes = [n for n in nodes if len(n["languages"]["edges"]) > 0]
+
+    return calculate_top_languages(nodes)
+
+
+def fetch_json() -> dict:
     response: Response = requests.post(
         ENDPOINT,
         headers=HEADERS,
@@ -21,10 +29,7 @@ def get_top_languages() -> dict:
     if json.get("errors"):
         raise Exception(str(json["errors"]))
 
-    nodes = json["data"]["user"]["repositories"]["nodes"]
-    nodes = [n for n in nodes if len(n["languages"]["edges"]) > 0]
-
-    return calculate_top_languages(nodes)
+    return json
 
 
 def calculate_top_languages(nodes: list) -> list:
