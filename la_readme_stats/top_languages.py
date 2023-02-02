@@ -24,9 +24,7 @@ def get_top_languages() -> dict:
     nodes = json["data"]["user"]["repositories"]["nodes"]
     nodes = [n for n in nodes if len(n["languages"]["edges"]) > 0]
 
-    top_languages = calculate_top_languages(nodes)
-
-    print(top_languages)
+    return calculate_top_languages(nodes)
 
 
 def calculate_top_languages(nodes: list) -> list:
@@ -51,6 +49,6 @@ def calculate_top_languages(nodes: list) -> list:
 def get_language_details(name: str, size: int, total_count: int, colors: dict) -> dict:
     return {
         "name": name,
-        "size": (size / total_count) * 100,
+        "size": round((size / total_count) * 100, 2),
         "color": colors[name],
     }
