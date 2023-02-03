@@ -1,6 +1,7 @@
 from pathlib import Path
 
-from la_readme_stats.svg import ICON, STATS
+from la_readme_stats.html import STATS
+from la_readme_stats.svg import ICON
 
 
 def draw_user_stats(stats: dict):

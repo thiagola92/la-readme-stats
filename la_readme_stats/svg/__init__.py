@@ -7,5 +7,3 @@ ICON = {
     "pull_request": Path("la_readme_stats/svg/pull_request.svg").read_text(),
     "issue": Path("la_readme_stats/svg/issue.svg").read_text(),
 }
-
-STATS = Path("la_readme_stats/html/stats.html").read_text()
