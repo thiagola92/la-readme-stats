@@ -11,7 +11,7 @@ env:
   LOGIN: ${{ github.repository_owner }}
 
 jobs:
-  update:
+  refresh:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
