@@ -1,7 +1,6 @@
 from pathlib import Path
 
-from la_readme_stats.html import STATS
-from la_readme_stats.svg import ICON
+from la_readme_stats.svg import ICON, STATS
 
 
 def draw_user_stats(stats: dict):
@@ -26,4 +25,4 @@ def draw_user_stats(stats: dict):
         )
         line += 25
 
-    Path("la_readme_stats/html/page_1.html").write_text(page)
+    Path("la_readme_stats/output/stats.svg").write_text(page)
