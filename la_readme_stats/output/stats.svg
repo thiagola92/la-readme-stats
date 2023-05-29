@@ -154,7 +154,7 @@
 </svg>
 
                     <text class="stat  bold" x="25" y="12.5">Total Commits:</text>
-                    <text class="stat  bold" x="219.01" y="12.5">3495</text>
+                    <text class="stat  bold" x="219.01" y="12.5">3531</text>
                 </g>
             </g>
             <g transform="translate(0, 50)">
@@ -180,7 +180,7 @@
 </svg>
 
                     <text class="stat  bold" x="25" y="12.5">Total Issues:</text>
-                    <text class="stat  bold" x="219.01" y="12.5">134</text>
+                    <text class="stat  bold" x="219.01" y="12.5">136</text>
                 </g>
             </g>
             <g transform="translate(0, 100)">
